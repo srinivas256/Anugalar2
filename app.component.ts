@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {userService} from './app.service';
+import {userService} from './app.service'; 
 
 
 @Component({
@@ -12,7 +12,7 @@ export class AppComponent  {
     name:string;
     pwd:string;
     result:boolean;
-    formHide : boolean= true;
+    formHide : boolean= false;
 
     constructor(private users:userService){}
 
@@ -23,7 +23,7 @@ export class AppComponent  {
          if(this.result){
              //this.document.location.href = 'https://stackoverflow.com';
              window.open("https://stackoverflow.com");
-             this.formHide = false;
+             this.formHide = true;
          }
      }
 
